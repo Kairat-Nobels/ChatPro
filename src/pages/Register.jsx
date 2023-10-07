@@ -22,8 +22,7 @@ function Register()
 
             const uploadTask = uploadBytesResumable(storageRef, file);
 
-            uploadTask.on('state_changed',
-
+            uploadTask.on(
                 (error) =>
                 {
                     setErr(true)
@@ -41,7 +40,9 @@ function Register()
                             displayName,
                             email,
                             photoURL: downloadURL,
-                        })
+                        });
+
+                        await setDoc(doc(db, "userChat", res.user.uid))
                     });
                 }
             );
