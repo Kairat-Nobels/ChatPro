@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Add from "../img/addAvatar.png";
+import Add from "../assets/images/addAvatar.png";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth, db, storage } from "../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
@@ -66,7 +66,7 @@ const Register = () =>
     return (
         <div className="formContainer">
             <div className="formWrapper">
-                <span className="logo">Lama Chat</span>
+                <span className="logo">Kaira Chat</span>
                 <span className="title">Register</span>
                 <form onSubmit={handleSubmit}>
                     <input required type="text" placeholder="display name" />
